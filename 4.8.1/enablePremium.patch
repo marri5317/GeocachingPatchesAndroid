@@ -1,0 +1,77 @@
+Only in decompiled_smali/: build
+diff -ur decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/bk.smali decompiled_smali/smali/com/groundspeak/geocaching/intro/h/bk.smali
+--- decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/bk.smali	2016-11-07 13:26:19.956757039 +0100
++++ decompiled_smali/smali/com/groundspeak/geocaching/intro/h/bk.smali	2016-11-07 13:33:44.078916679 +0100
+@@ -117,38 +117,10 @@
+     move-result-object v2
+ 
+     .line 202
+-    invoke-virtual {p0}, Lcom/geocaching/api/legacy/account/AccountResponse$AuthenticationResponse;->getAccount()Lcom/geocaching/api/legacy/account/type/Account;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Lcom/geocaching/api/legacy/account/type/Account;->getMembershipInfo()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;->getMembershipType()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;->getMemberTypeName()Ljava/lang/String;
+-
+-    move-result-object v3
++    const-string v3, "Premium"
+ 
+     .line 203
+-    invoke-virtual {p0}, Lcom/geocaching/api/legacy/account/AccountResponse$AuthenticationResponse;->getAccount()Lcom/geocaching/api/legacy/account/type/Account;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v4}, Lcom/geocaching/api/legacy/account/type/Account;->getMembershipInfo()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v4}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;->getMembershipType()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v4}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;->getMemberTypeId()I
+-
+-    move-result v4
++    const/4 v4, 0x3
+ 
+     invoke-direct {v0, v1, v2, v3, v4}, Lcom/groundspeak/geocaching/intro/h/bk;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+ 
+diff -ur decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/bl.smali decompiled_smali/smali/com/groundspeak/geocaching/intro/h/bl.smali
+--- decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/bl.smali	2016-11-07 13:26:19.956757039 +0100
++++ decompiled_smali/smali/com/groundspeak/geocaching/intro/h/bl.smali	2016-11-07 13:43:17.474022390 +0100
+@@ -84,26 +84,14 @@
+     .line 136
+     iget-object v0, p0, Lcom/groundspeak/geocaching/intro/h/bl;->b:Lcom/groundspeak/geocaching/intro/h/bk;
+ 
+-    iget-object v1, p1, Lcom/groundspeak/geocaching/intro/b/a/b/d;->a:Lcom/groundspeak/geocaching/intro/b/a/b/d$a;
+-
+-    iget-object v1, v1, Lcom/groundspeak/geocaching/intro/b/a/b/d$a;->a:Lcom/groundspeak/geocaching/intro/b/a/b/d$a$c;
+-
+-    iget-object v1, v1, Lcom/groundspeak/geocaching/intro/b/a/b/d$a$c;->c:Lcom/groundspeak/geocaching/intro/b/a/b/a/a;
+-
+-    iget v1, v1, Lcom/groundspeak/geocaching/intro/b/a/b/a/a;->b:I
++    const/4 v1, 0x3
+ 
+     invoke-virtual {v0, v1}, Lcom/groundspeak/geocaching/intro/h/bk;->a(I)V
+ 
+     .line 137
+     iget-object v0, p0, Lcom/groundspeak/geocaching/intro/h/bl;->b:Lcom/groundspeak/geocaching/intro/h/bk;
+ 
+-    iget-object v1, p1, Lcom/groundspeak/geocaching/intro/b/a/b/d;->a:Lcom/groundspeak/geocaching/intro/b/a/b/d$a;
+-
+-    iget-object v1, v1, Lcom/groundspeak/geocaching/intro/b/a/b/d$a;->a:Lcom/groundspeak/geocaching/intro/b/a/b/d$a$c;
+-
+-    iget-object v1, v1, Lcom/groundspeak/geocaching/intro/b/a/b/d$a$c;->c:Lcom/groundspeak/geocaching/intro/b/a/b/a/a;
+-
+-    iget-object v1, v1, Lcom/groundspeak/geocaching/intro/b/a/b/a/a;->a:Ljava/lang/String;
++    const-string v1, "Premium"
+ 
+     invoke-virtual {v0, v1}, Lcom/groundspeak/geocaching/intro/h/bk;->d(Ljava/lang/String;)V
+ 
