@@ -1,0 +1,57 @@
+Only in decompiled_smali: build
+diff -ur decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/k$1.smali decompiled_smali/smali/com/groundspeak/geocaching/intro/h/k$1.smali
+--- decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/k$1.smali	2016-11-26 16:07:31.896589476 +0100
++++ decompiled_smali/smali/com/groundspeak/geocaching/intro/h/k$1.smali	2016-11-26 16:18:43.297708496 +0100
+@@ -60,7 +60,7 @@
+     .line 136
+     iget-object v0, p0, Lcom/groundspeak/geocaching/intro/h/k$1;->b:Lcom/groundspeak/geocaching/intro/h/k;
+ 
+-    iget v1, p1, Lcom/geocaching/api/type/ProfileResponse;->membershipTypeId:I
++    const/4 v1, 0x3
+ 
+     invoke-virtual {v0, v1}, Lcom/groundspeak/geocaching/intro/h/k;->a(I)V
+ 
+diff -ur decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/k.smali decompiled_smali/smali/com/groundspeak/geocaching/intro/h/k.smali
+--- decompiled_smali_org/smali/com/groundspeak/geocaching/intro/h/k.smali	2016-11-26 16:07:31.900589489 +0100
++++ decompiled_smali/smali/com/groundspeak/geocaching/intro/h/k.smali	2016-11-26 16:13:24.946035422 +0100
+@@ -112,38 +112,10 @@
+     move-result-object v2
+ 
+     .line 201
+-    invoke-virtual {p0}, Lcom/geocaching/api/legacy/account/AccountResponse$AuthenticationResponse;->getAccount()Lcom/geocaching/api/legacy/account/type/Account;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Lcom/geocaching/api/legacy/account/type/Account;->getMembershipInfo()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;->getMembershipType()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;->getMemberTypeName()Ljava/lang/String;
+-
+-    move-result-object v3
++    const-string v3, "Premium"
+ 
+     .line 202
+-    invoke-virtual {p0}, Lcom/geocaching/api/legacy/account/AccountResponse$AuthenticationResponse;->getAccount()Lcom/geocaching/api/legacy/account/type/Account;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v4}, Lcom/geocaching/api/legacy/account/type/Account;->getMembershipInfo()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v4}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo;->getMembershipType()Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;
+-
+-    move-result-object v4
+-
+-    invoke-virtual {v4}, Lcom/geocaching/api/legacy/account/type/Account$MembershipInfo$MemberType;->getMemberTypeId()I
+-
+-    move-result v4
++    const/4 v4, 0x3
+ 
+     invoke-direct {v0, v1, v2, v3, v4}, Lcom/groundspeak/geocaching/intro/h/k;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+ 
